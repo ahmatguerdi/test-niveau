@@ -9,11 +9,9 @@ function crypter(word, key) {
     let index = alphabet.indexOf(word[i]);
     let newIndex;
     if (index + key <= 25) {
-    //   console.log("Premier bloc est exécuté");
       newIndex = index + key;
       cryptedWord += alphabet[newIndex];
     } else if (index + key > 25) {
-    //   console.log("Deuxième bloc est exécuté");
       newIndex = index + key - 26;
       cryptedWord += alphabet[newIndex];
     }
@@ -30,11 +28,9 @@ function decrypter(word, key) {
       let index = alphabet.indexOf(word[i]);
       let newIndex;
       if (index - key >= 0) {
-        // console.log("Premier bloc est exécuté");
         newIndex = index - key;
         cryptedWord += alphabet[newIndex];
       } else if (index - key < 0) {
-        // console.log("Deuxième bloc est exécuté");
         newIndex = index - key + 26;
         cryptedWord += alphabet[newIndex];
       }
