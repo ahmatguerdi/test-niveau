@@ -39,7 +39,7 @@ function decrypter(word, key) {
     
 }
 
-const message = "zhmat";
+const message = "ahmat";
 const key = 3;
 
 const cryptoGramme = crypter(message, key);
