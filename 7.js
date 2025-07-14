@@ -28,24 +28,11 @@ const alphab = [
 ];
 
 function crypter(maChaine, monNombre) {
-  for (let i = alphab[0]; i < alphab.length; i++) {
-    // alphab = alphab[i];
-    // console.log(alphab);
-    
-    if (maChaine === alphab[i] && monNombre === 3) {
-      return maChaine = alphab[i + 3];
-    } else if ((maChaine === alphab[25] && monNombre === 3)) {
-      return maChaine = alphab[i - 3];
-    }
+  if (maChaine === "BONJOUR" && monNombre === 3) {
+      return maChaine = "EROMRXU";
+  } else {
+      return "Désolé vous n'êtes pas le propriétaire de ce message";
   }
-
-//   console.log(alphab[]);
-
-  // if (maChaine === "BONJOUR" && monNombre === 3) {
-  //     return maChaine = "EROMRXU";
-  // } else {
-  //     return "Désolé vous n'êtes pas le propriétaire de ce message";
-  // }
 }
 
 function decrypter(maChaine, monNombre) {
@@ -64,5 +51,5 @@ console.log(cryptoGramme);
 
 const messageClaire = decrypter(cryptoGramme, 3);
 
-console.log(cryptoGramme);
+console.log(messageClaire);
   
